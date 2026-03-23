@@ -3,22 +3,17 @@ import socket
 MAX_BYTES = 65535
 
 def server(port):
-    # Création socket UDP
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-
-    # Liaison au port
     sock.bind(('127.0.0.1', port))
-
     print(f"Serveur en écoute sur {sock.getsockname()}")
-
     while True:
-        # Réception du message
+       
         data, address = sock.recvfrom(MAX_BYTES)
 
         text = data.decode('utf-8')
         print(f"Client {address} : {text}")
 
-        # Réponse au client
+       
         reponse = f"Reçu : {len(data)} octets"
         data = reponse.encode('utf-8')
 
