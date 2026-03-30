@@ -38,3 +38,22 @@ sock.recvfrom(MAX_BYTES)
 reçoit la réponse du serveur.
 data.decode('utf-8')
 convertit les octets reçus en texte lisible.
+
+Aller plus loin — N clients
+
+1. Si on a plusieurs clients (N clients), proposer des modifications pour qu’un client A puisse discuter directement avec un client B:
+
+Si le système comporte plusieurs clients, le serveur doit maintenir une liste ou un dictionnaire des clients connectés. Chaque client peut être identifié par un nom, un pseudo, ou une adresse réseau. Lorsqu’un client A veut envoyer un message à un client B, il doit préciser le destinataire dans son message. Le serveur lit ce destinataire puis retransmet le message uniquement au client B au lieu de l’envoyer à tous les autres clients.
+
+2. Quels sont les inconvénients de cette architecture ?
+
+
+Cette architecture présente plusieurs inconvénients.
+D’abord, le serveur est un point central unique : s’il tombe en panne, toute la communication s’arrête.
+Ensuite, quand le nombre de clients augmente, le serveur doit gérer davantage de messages et peut devenir lent.
+De plus, avec UDP, les messages ne sont pas garantis : ils peuvent être perdus, dupliqués ou arriver dans le désordre.
+Enfin, cette architecture demande au serveur de conserver les informations de tous les clients, ce qui complique la gestion du système.
+
+Exercice Tableau :
+
+Pour résoudre le problème sans utiliser la division, on calcule pour chaque élément le produit des éléments situés à gauche et à droite. On stocke ces produits dans deux tableaux intermédiaires, puis on multiplie les valeurs correspondantes pour obtenir le résultat final. Cette méthode permet d’obtenir une solution efficace en temps linéaire.

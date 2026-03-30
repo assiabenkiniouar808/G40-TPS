@@ -1,28 +1,33 @@
-def produit_sans_soi(nums):
-    n = len(nums)
-    
-    gauche = [1] * n
-    droite = [1] * n
-    resultat = [1] * n
+import socket
+import threading
 
-    for i in range(1, n):
-        gauche[i] = gauche[i-1] * nums[i-1]
+MAX_BYTES = 65535
 
-    for i in range(n-2, -1, -1):
-        droite[i] = droite[i+1] * nums[i+1]
+def recevoir(sock):
+    while True:
+        try:
+            data, address = sock.recvfrom(MAX_BYTES)
+            print("\nMessage reçu :", data.decode('utf-8'))
+        except:
+            break
 
-    for i in range(n):
-        resultat[i] = gauche[i] * droite[i]
+def client(port):
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-    return resultat
+    thread_reception = threading.Thread(target=recevoir, args=(sock,), daemon=True)
+    thread_reception.start()
 
+    print("Tape tes messages. Tape 'quit' pour quitter.")
 
-def test():
-    assert produit_sans_soi([1,2,3,4,5]) == [120,60,40,30,24]
-    assert produit_sans_soi([3,2,1]) == [2,3,6]
-    assert produit_sans_soi([1,1,1]) == [1,1,1]
-    print("Tous les tests sont OK")
+    while True:
+        text = input("> ")
 
+        if text.lower() == "quit":
+            break
+
+        sock.sendto(text.encode('utf-8'), ('127.0.0.1', port))
+
+    sock.close()
 
 if __name__ == "__main__":
-    test()
+    client(1060)
