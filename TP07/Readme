@@ -1,2 +1,36 @@
-J’ai rencontré des problèmes lors de l’installation de Postman sur mon PC. J’ai donc utilisé Postman Web pour envoyer une requête GET vers https://www.google.com
- et observer la réponse HTTP (code 200, en-têtes et corps de la réponse).
+# TP07 - API OpenWeather
+
+## Utilisation de Postman
+
+En raison de problèmes rencontrés lors de l’installation de Postman sur mon ordinateur, j’ai utilisé Postman Web.
+
+Cela m’a permis d’envoyer une requête GET vers l’API OpenWeatherMap afin de récupérer la météo d’une ville.
+
+Exemple de requête :
+
+https://api.openweathermap.org/data/2.5/weather?q=Rabat&appid=API_KEY&units=metric
+
+La réponse obtenue est au format JSON et contient :
+- la température
+- la description météo
+- l'humidité
+
+## HTTPie
+
+La même requête a été testée avec HTTPie :
+
+http GET "https://api.openweathermap.org/data/2.5/weather?q=Rabat&appid=API_KEY&units=metric"
+
+## Script Python
+
+Un script Python nommé `openweather.py` a été développé pour :
+- demander à l’utilisateur une ville
+- envoyer une requête HTTP vers l’API OpenWeather
+- afficher les informations météo (température, description, humidité)
+
+## Conclusion
+
+Ce TP m’a permis de comprendre :
+- les requêtes HTTP
+- les APIs REST
+- l’utilisation de Postman et HTTPie
