@@ -2,9 +2,9 @@
 
 ## Utilisation de Postman
 
-En raison de problèmes rencontrés lors de l’installation de Postman sur mon ordinateur, j’ai utilisé Postman Web.
+En raison de problèmes rencontrés lors de l'installation de Postman sur mon ordinateur, j'ai utilisé Postman Web.
 
-Cela m’a permis d’envoyer une requête GET vers l’API OpenWeatherMap afin de récupérer la météo d’une ville.
+Cela m'a permis d'envoyer une requête GET vers l'API OpenWeatherMap afin de récupérer la météo d'une ville.
 
 Exemple de requête :
 
@@ -24,13 +24,12 @@ http GET "https://api.openweathermap.org/data/2.5/weather?q=Rabat&appid=API_KEY&
 ## Script Python
 
 Un script Python nommé `openweather.py` a été développé pour :
-- demander à l’utilisateur une ville
-- envoyer une requête HTTP vers l’API OpenWeather
+- demander à l'utilisateur une ville
+- envoyer une requête HTTP vers l'API OpenWeather
 - afficher les informations météo (température, description, humidité)
 
-## Conclusion
+## Remarque sur l’API Django
 
-Ce TP m’a permis de comprendre :
-- les requêtes HTTP
-- les APIs REST
-- l’utilisation de Postman et HTTPie
+L’API REST pour la gestion des messages a été développée dans le TP06, dans l’application Django `myapi` du projet `chatServer`.
+
+Cette application permet de gérer les messages (création, lecture, modification, suppression) en utilisant les méthodes HTTP (GET, POST, PUT, DELETE).
