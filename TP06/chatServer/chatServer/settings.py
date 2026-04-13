@@ -23,10 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-as7gahv^f6+8i5oioq8xh#@ostf%#-b8!n&_t+lgh&!%wnshw_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
+STATIC_URL = 'static/'
 
 # Application definition
 
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'g40aChat',
+    'myapi.apps.MyapiConfig',
 ]
 
 MIDDLEWARE = [
