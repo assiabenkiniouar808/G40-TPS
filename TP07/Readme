@@ -1,0 +1,2 @@
+J’ai rencontré des problèmes lors de l’installation de Postman sur mon PC. J’ai donc utilisé Postman Web pour envoyer une requête GET vers https://www.google.com
+ et observer la réponse HTTP (code 200, en-têtes et corps de la réponse).
