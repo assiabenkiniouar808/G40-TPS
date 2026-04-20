@@ -1,0 +1,51 @@
+I. Questions à choix multiple 
+1) Le langage Python
+
+a.
+ Interprété
+
+b.
+ Peut tourner sur n’importe quelle machine grâce à la machine virtuelle
+
+c.
+ D’installer et de supprimer des libraries python sur une machine
+
+d.
+ Est un langage typé
+
+e.
+ Dépend fortement de la version de python avec laquelle il est écrit
+
+2) Structures de données et fonctions
+
+a.
+ Immuables et homogènes dans leur contenu
+
+b.
+ ma_liste[-2:]
+
+c.
+ Renvoi : [1, 3, 5, 7, 11, 13]
+
+d.
+ D’enregistrer des définitions des variables
+
+e.
+ registring <function func1>
+
+3) Orienté objet
+
+a.
+ Hybride
+
+b.
+ En précédant le nom par le symbole _
+
+c.
+ Un héritage multiple
+
+d.
+ init et new
+
+e.
+ Décrémenter le compteur mémoire de l’objet (garbage collector)
